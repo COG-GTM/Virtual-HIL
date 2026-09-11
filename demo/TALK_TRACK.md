@@ -8,7 +8,7 @@ CAN frames — exactly as it would on a real HIL bench.
 
 Now we inject faults you could never safely inject on hardware. Over-voltage: cell 2 driven
 to 4.35 volts. The BMS trips, opens the contactor, and publishes a fault frame on CAN 0x101.
-Cell imbalance: a weak cell sags 300 millivolts — the BMS flags it but keeps the pack online.
+Cell imbalance: a weak cell sags 400 millivolts — the BMS flags it but keeps the pack online.
 Over-temperature: coolant loss, the pack ramps past 60 degrees, contactor opens again.
 
 Everything is logged to CSV and plotted with the fault windows overlaid — that is our

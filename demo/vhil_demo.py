@@ -30,7 +30,7 @@ NUM_CELLS = 4
 FAULTS = {
     "overtemp": "Coolant loss: pack temperature ramps to 70 C",
     "overvoltage": "Charger runaway: cell 2 driven to 4.35 V",
-    "imbalance": "Weak cell: cell 4 sags 0.30 V below the pack",
+    "imbalance": "Weak cell: cell 4 sags 0.40 V below the pack",
 }
 
 state = {
@@ -52,7 +52,7 @@ def apply_fault(voltages, temperature, fault, elapsed):
     elif fault == "overvoltage":
         voltages[1] = 4.35
     elif fault == "imbalance":
-        voltages[3] -= 0.30
+        voltages[3] -= 0.40
     return voltages, temperature
 
 
@@ -131,7 +131,7 @@ def run(duration, step, out_dir, port, scripted):
         if not safe:
             bms_status = "FAULT_OVERTEMP" if rx_t > TEMP_LIMIT else "FAULT_OVERVOLTAGE"
             contactor = "OPEN"
-        elif spread > 0.2:
+        elif spread > 0.25:
             bms_status, contactor = "WARN_IMBALANCE", "CLOSED"
         else:
             bms_status, contactor = "OK", "CLOSED"
