@@ -126,11 +126,10 @@ def run(duration, step, out_dir, port, scripted):
         msg = can.receive()
         rx_v, rx_t, rx_soc = decode_battery_status(msg[1])
 
-        safe, balanced = bms.run_control_logic(list(rx_v), rx_t)
+        safe, _balanced = bms.run_control_logic(list(rx_v), rx_t)
         spread = max(rx_v) - min(rx_v)
         if not safe:
             bms_status = "FAULT_OVERTEMP" if rx_t > TEMP_LIMIT else "FAULT_OVERVOLTAGE"
-            balanced = list(rx_v)  # no balancing while contactor is open
             contactor = "OPEN"
         elif spread > 0.2:
             bms_status, contactor = "WARN_IMBALANCE", "CLOSED"
