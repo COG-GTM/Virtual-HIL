@@ -1,0 +1,104 @@
+ * Serving Flask app 'flask_dashboard2'
+ * Debug mode: off
+[CAN 0x100] t=  0s  V=[3.93, 3.97, 4.06, 3.89]  T= 22.7C  SOC= 99.6%  
+[CAN 0x100] t=  1s  V=[3.98, 3.91, 3.91, 4.00]  T= 25.5C  SOC= 99.2%  
+[CAN 0x100] t=  2s  V=[4.00, 4.02, 3.86, 3.99]  T= 22.7C  SOC= 98.8%  
+[CAN 0x100] t=  3s  V=[3.94, 3.91, 3.87, 4.01]  T= 24.2C  SOC= 98.4%  
+[CAN 0x100] t=  4s  V=[3.99, 3.92, 4.04, 4.03]  T= 25.5C  SOC= 98.0%  
+[CAN 0x100] t=  5s  V=[3.90, 3.99, 3.88, 3.98]  T= 24.4C  SOC= 97.6%  
+[CAN 0x100] t=  6s  V=[4.02, 3.97, 3.95, 4.02]  T= 27.1C  SOC= 97.2%  
+[CAN 0x100] t=  7s  V=[3.89, 3.93, 3.82, 4.01]  T= 25.1C  SOC= 96.8%  
+[CAN 0x100] t=  8s  V=[3.98, 3.94, 3.92, 3.83]  T= 25.5C  SOC= 96.4%  
+[CAN 0x100] t=  9s  V=[3.87, 3.91, 3.96, 4.03]  T= 23.4C  SOC= 96.0%  
+[CAN 0x101] t= 10s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 10s  V=[3.88, 4.35, 4.00, 3.92]  T= 22.5C  SOC= 95.6%  <-- overvoltage
+[CAN 0x101] t= 11s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 11s  V=[3.96, 4.35, 3.93, 3.91]  T= 25.3C  SOC= 95.2%  <-- overvoltage
+[CAN 0x101] t= 12s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 12s  V=[4.03, 4.35, 3.92, 3.89]  T= 26.6C  SOC= 94.8%  <-- overvoltage
+[CAN 0x101] t= 13s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 13s  V=[3.96, 4.35, 3.89, 3.89]  T= 27.0C  SOC= 94.4%  <-- overvoltage
+[CAN 0x101] t= 14s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 14s  V=[3.96, 4.35, 3.91, 3.87]  T= 26.1C  SOC= 94.0%  <-- overvoltage
+[CAN 0x101] t= 15s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 15s  V=[3.89, 4.35, 3.88, 3.98]  T= 18.9C  SOC= 93.6%  <-- overvoltage
+[CAN 0x101] t= 16s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 16s  V=[3.93, 4.35, 3.98, 3.89]  T= 23.9C  SOC= 93.2%  <-- overvoltage
+[CAN 0x101] t= 17s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 17s  V=[3.85, 4.35, 3.88, 3.94]  T= 24.8C  SOC= 92.8%  <-- overvoltage
+[CAN 0x101] t= 18s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 18s  V=[4.01, 4.35, 3.94, 3.89]  T= 22.7C  SOC= 92.4%  <-- overvoltage
+[CAN 0x101] t= 19s  {'status': 'FAULT_OVERVOLTAGE', 'contactor': 'OPEN'}
+[CAN 0x100] t= 19s  V=[3.88, 4.35, 3.99, 3.90]  T= 23.8C  SOC= 92.0%  <-- overvoltage
+[CAN 0x100] t= 20s  V=[3.80, 3.93, 3.94, 3.84]  T= 24.9C  SOC= 91.6%  
+[CAN 0x100] t= 21s  V=[3.97, 3.86, 3.98, 3.92]  T= 23.9C  SOC= 91.2%  
+[CAN 0x100] t= 22s  V=[3.98, 3.86, 3.93, 3.90]  T= 25.7C  SOC= 90.8%  
+[CAN 0x100] t= 23s  V=[3.88, 4.01, 3.87, 3.88]  T= 25.5C  SOC= 90.4%  
+[CAN 0x100] t= 24s  V=[3.90, 3.90, 3.89, 4.00]  T= 25.9C  SOC= 90.0%  
+[CAN 0x100] t= 25s  V=[3.85, 3.90, 3.90, 3.85]  T= 25.0C  SOC= 89.6%  
+[CAN 0x100] t= 26s  V=[3.91, 3.90, 3.84, 3.86]  T= 25.5C  SOC= 89.2%  
+[CAN 0x100] t= 27s  V=[3.81, 3.92, 3.97, 4.00]  T= 24.9C  SOC= 88.8%  
+[CAN 0x100] t= 28s  V=[3.94, 3.79, 3.90, 3.93]  T= 28.2C  SOC= 88.4%  
+[CAN 0x100] t= 29s  V=[3.87, 3.81, 3.83, 3.92]  T= 26.0C  SOC= 88.0%  
+[CAN 0x101] t= 30s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 30s  V=[3.86, 3.98, 3.87, 3.50]  T= 29.4C  SOC= 87.6%  <-- imbalance
+[CAN 0x101] t= 31s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 31s  V=[3.87, 3.88, 3.78, 3.56]  T= 27.3C  SOC= 87.2%  <-- imbalance
+[CAN 0x101] t= 32s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 32s  V=[3.90, 3.85, 3.86, 3.44]  T= 25.6C  SOC= 86.8%  <-- imbalance
+[CAN 0x101] t= 33s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 33s  V=[3.85, 3.90, 3.87, 3.44]  T= 21.6C  SOC= 86.4%  <-- imbalance
+[CAN 0x101] t= 34s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 34s  V=[3.84, 3.86, 3.75, 3.54]  T= 27.6C  SOC= 86.0%  <-- imbalance
+[CAN 0x101] t= 35s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 35s  V=[3.87, 3.82, 3.93, 3.43]  T= 23.8C  SOC= 85.6%  <-- imbalance
+[CAN 0x101] t= 36s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 36s  V=[3.81, 3.90, 3.89, 3.48]  T= 26.4C  SOC= 85.2%  <-- imbalance
+[CAN 0x101] t= 37s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 37s  V=[3.86, 3.88, 3.90, 3.45]  T= 27.9C  SOC= 84.8%  <-- imbalance
+[CAN 0x101] t= 38s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 38s  V=[3.89, 3.92, 3.79, 3.40]  T= 25.7C  SOC= 84.4%  <-- imbalance
+[CAN 0x101] t= 39s  {'status': 'WARN_IMBALANCE', 'contactor': 'CLOSED'}
+[CAN 0x100] t= 39s  V=[3.80, 3.88, 3.82, 3.45]  T= 30.3C  SOC= 84.0%  <-- imbalance
+[CAN 0x100] t= 40s  V=[3.86, 3.80, 3.86, 3.84]  T= 23.1C  SOC= 83.6%  
+[CAN 0x100] t= 41s  V=[3.86, 3.93, 3.86, 3.87]  T= 24.9C  SOC= 83.2%  
+[CAN 0x100] t= 42s  V=[3.92, 3.85, 3.86, 3.90]  T= 27.7C  SOC= 82.8%  
+[CAN 0x100] t= 43s  V=[3.81, 3.88, 3.77, 3.89]  T= 20.3C  SOC= 82.4%  
+[CAN 0x100] t= 44s  V=[3.85, 3.88, 3.83, 3.78]  T= 27.4C  SOC= 82.0%  
+[CAN 0x100] t= 45s  V=[3.83, 3.85, 3.85, 3.87]  T= 26.5C  SOC= 81.6%  
+[CAN 0x100] t= 46s  V=[3.88, 3.89, 3.71, 3.87]  T= 24.6C  SOC= 81.2%  
+[CAN 0x100] t= 47s  V=[3.82, 3.81, 3.86, 3.91]  T= 22.6C  SOC= 80.8%  
+[CAN 0x100] t= 48s  V=[3.87, 3.86, 3.84, 3.92]  T= 22.8C  SOC= 80.4%  
+[CAN 0x100] t= 49s  V=[3.87, 3.77, 3.77, 3.90]  T= 22.1C  SOC= 80.0%  
+[CAN 0x100] t= 50s  V=[3.90, 3.83, 3.83, 3.87]  T= 25.0C  SOC= 79.6%  <-- overtemp
+[CAN 0x100] t= 51s  V=[3.84, 3.84, 3.83, 3.83]  T= 37.0C  SOC= 79.2%  <-- overtemp
+[CAN 0x100] t= 52s  V=[3.85, 3.93, 3.87, 3.77]  T= 49.0C  SOC= 78.8%  <-- overtemp
+[CAN 0x101] t= 53s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 53s  V=[3.84, 3.88, 3.81, 3.79]  T= 61.0C  SOC= 78.4%  <-- overtemp
+[CAN 0x101] t= 54s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 54s  V=[3.86, 3.84, 3.87, 3.79]  T= 70.0C  SOC= 78.0%  <-- overtemp
+[CAN 0x101] t= 55s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 55s  V=[3.86, 3.79, 3.90, 3.85]  T= 70.0C  SOC= 77.6%  <-- overtemp
+[CAN 0x101] t= 56s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 56s  V=[3.75, 3.88, 3.86, 3.86]  T= 70.0C  SOC= 77.2%  <-- overtemp
+[CAN 0x101] t= 57s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 57s  V=[3.83, 3.93, 3.79, 3.88]  T= 70.0C  SOC= 76.8%  <-- overtemp
+[CAN 0x101] t= 58s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 58s  V=[3.85, 3.84, 3.76, 3.90]  T= 70.0C  SOC= 76.4%  <-- overtemp
+[CAN 0x101] t= 59s  {'status': 'FAULT_OVERTEMP', 'contactor': 'OPEN'}
+[CAN 0x100] t= 59s  V=[3.83, 3.81, 3.74, 3.70]  T= 70.0C  SOC= 76.0%  <-- overtemp
+[CAN 0x100] t= 60s  V=[3.87, 3.87, 3.86, 3.80]  T= 26.4C  SOC= 75.6%  
+[CAN 0x100] t= 61s  V=[3.88, 3.88, 3.86, 3.73]  T= 24.3C  SOC= 75.2%  
+[CAN 0x100] t= 62s  V=[3.84, 3.81, 3.82, 3.81]  T= 25.8C  SOC= 74.8%  
+[CAN 0x100] t= 63s  V=[3.86, 3.86, 3.85, 3.92]  T= 25.2C  SOC= 74.4%  
+[CAN 0x100] t= 64s  V=[3.74, 3.84, 3.81, 3.84]  T= 24.0C  SOC= 74.0%  
+[CAN 0x100] t= 65s  V=[3.83, 3.83, 3.74, 3.90]  T= 22.6C  SOC= 73.6%  
+[CAN 0x100] t= 66s  V=[3.84, 3.84, 3.87, 3.81]  T= 24.2C  SOC= 73.2%  
+[CAN 0x100] t= 67s  V=[3.81, 3.84, 3.70, 3.90]  T= 27.3C  SOC= 72.8%  
+[CAN 0x100] t= 68s  V=[3.90, 3.73, 3.76, 3.87]  T= 28.7C  SOC= 72.4%  
+[CAN 0x100] t= 69s  V=[3.82, 3.70, 3.78, 3.76]  T= 24.5C  SOC= 72.0%  
+[CAN 0x100] t= 70s  V=[3.83, 3.90, 3.84, 3.79]  T= 20.1C  SOC= 71.6%  
+[CAN 0x100] t= 71s  V=[3.74, 3.85, 3.78, 3.84]  T= 27.3C  SOC= 71.2%  
+[CAN 0x100] t= 72s  V=[3.83, 3.71, 3.83, 3.78]  T= 26.0C  SOC= 70.8%  
+[CAN 0x100] t= 73s  V=[3.81, 3.81, 3.86, 3.83]  T= 28.3C  SOC= 70.4%  
+[CAN 0x100] t= 74s  V=[3.81, 3.86, 3.76, 3.82]  T= 25.3C  SOC= 70.0%  

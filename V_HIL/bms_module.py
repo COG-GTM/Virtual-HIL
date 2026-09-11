@@ -31,6 +31,7 @@ class BMS:
         return balanced
 
     def run_control_logic(self, cell_voltages, temperature):
+        safe = self.check_safety(cell_voltages, temperature)
         cell_voltages = self.balance_cells(cell_voltages)
-        return self.check_safety(cell_voltages, temperature), cell_voltages
+        return safe, cell_voltages
 
