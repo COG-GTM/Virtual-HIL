@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+vhil_log_*.csv

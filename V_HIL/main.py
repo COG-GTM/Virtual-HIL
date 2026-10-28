@@ -51,11 +51,13 @@ def run_virtual_hil():
 
         if msg and msg[0] == BATTERY_STATUS_ID:
             voltages, temperature, soc = decode_battery_status(msg[1])
+            bms.frame_received(t)
 
         volt_str = ', '.join(f"{v:.2f}V" for v in voltages)
         logging.info(f"Time {t}s | Voltages: [{volt_str}] | Temp: {temperature:.2f}°C | SoC: {soc:.2f}%")
 
         safe, voltages = bms.run_control_logic(voltages, temperature)
+        safe = bms.check_can_timeout(t) and safe
         logger.log(t, voltages, temperature, soc)
 
         if not safe:
