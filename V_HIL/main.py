@@ -20,6 +20,7 @@ from threading import Thread
 NUM_CELLS = 4
 TIME_STEP = 1       # seconds
 SIM_DURATION = 60   # seconds
+CAN_LOSS_AT = None  # seconds; pack stops publishing 0x100 from this time
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
@@ -39,6 +40,7 @@ def run_virtual_hil():
     can = CANBus()
     logger = DataLogger()
 
+    bms.arm_can_watchdog(0)
     for t in range(0, SIM_DURATION, TIME_STEP):
         voltages = battery.simulate_cell_voltage()
         temperature = battery.simulate_temperature()
@@ -46,16 +48,19 @@ def run_virtual_hil():
 
         voltages = battery.inject_fault(voltages)
 
-        can.send(msg_id=BATTERY_STATUS_ID, data=encode_battery_status(voltages, temperature, soc))
+        if CAN_LOSS_AT is None or t < CAN_LOSS_AT:
+            can.send(msg_id=BATTERY_STATUS_ID, data=encode_battery_status(voltages, temperature, soc))
         msg = can.receive()
 
         if msg and msg[0] == BATTERY_STATUS_ID:
             voltages, temperature, soc = decode_battery_status(msg[1])
+            bms.frame_received(t)
 
         volt_str = ', '.join(f"{v:.2f}V" for v in voltages)
         logging.info(f"Time {t}s | Voltages: [{volt_str}] | Temp: {temperature:.2f}°C | SoC: {soc:.2f}%")
 
         safe, voltages = bms.run_control_logic(voltages, temperature)
+        safe = bms.check_can_timeout(t) and safe
         logger.log(t, voltages, temperature, soc)
 
         if not safe:
