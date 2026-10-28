@@ -40,6 +40,7 @@ def run_virtual_hil():
     can = CANBus()
     logger = DataLogger()
 
+    bms.arm_can_watchdog(0)
     for t in range(0, SIM_DURATION, TIME_STEP):
         voltages = battery.simulate_cell_voltage()
         temperature = battery.simulate_temperature()

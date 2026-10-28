@@ -101,3 +101,10 @@ def test_req_bms_005_can_loss_trips_after_timeout():
 
 def test_req_bms_006_can_timeout_not_armed_before_first_frame():
     assert BMS(NUM_CELLS).check_can_timeout(100.0)
+
+
+def test_req_bms_007_armed_watchdog_trips_if_no_frame_ever_arrives():
+    bms = BMS(NUM_CELLS)
+    bms.arm_can_watchdog(0.0)
+    assert bms.check_can_timeout(bms.can_timeout - CYCLE_S)
+    assert not bms.check_can_timeout(bms.can_timeout)
