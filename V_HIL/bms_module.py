@@ -21,7 +21,7 @@ class BMS:
         self.last_frame_time = t
 
     def check_can_timeout(self, t):
-        if self.last_frame_time is not None and t - self.last_frame_time > self.can_timeout:
+        if self.last_frame_time is not None and t - self.last_frame_time >= self.can_timeout:
             logging.error(f"CAN timeout: no battery status for {t - self.last_frame_time:.2f}s. Stopping charge.")
             return False
         return True

@@ -20,6 +20,7 @@ from threading import Thread
 NUM_CELLS = 4
 TIME_STEP = 1       # seconds
 SIM_DURATION = 60   # seconds
+CAN_LOSS_AT = None  # seconds; pack stops publishing 0x100 from this time
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
@@ -46,7 +47,8 @@ def run_virtual_hil():
 
         voltages = battery.inject_fault(voltages)
 
-        can.send(msg_id=BATTERY_STATUS_ID, data=encode_battery_status(voltages, temperature, soc))
+        if CAN_LOSS_AT is None or t < CAN_LOSS_AT:
+            can.send(msg_id=BATTERY_STATUS_ID, data=encode_battery_status(voltages, temperature, soc))
         msg = can.receive()
 
         if msg and msg[0] == BATTERY_STATUS_ID:

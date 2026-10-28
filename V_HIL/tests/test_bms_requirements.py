@@ -95,8 +95,7 @@ def test_req_bms_005_can_loss_trips_after_timeout():
     cycle, ms = first_trip(frames, drop_from=5)
     timeout_cycles = BMS(NUM_CELLS).can_timeout / CYCLE_S
     assert cycle is not None, "CAN loss never detected"
-    assert (cycle - 4) * CYCLE_S > BMS(NUM_CELLS).can_timeout
-    assert cycle - 4 <= timeout_cycles + 1
+    assert cycle - 4 == timeout_cycles
     assert ms < MAX_REACTION_MS
 
 
